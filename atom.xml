@@ -4,7 +4,7 @@
   <title><![CDATA[Loulan-d's Blog]]></title>
   <link href="http://loulan-d.github.io/atom.xml" rel="self"/>
   <link href="http://loulan-d.github.io/"/>
-  <updated>2018-10-12T20:07:54+08:00</updated>
+  <updated>2018-10-12T20:31:09+08:00</updated>
   <id>http://loulan-d.github.io/</id>
   <author>
     <name><![CDATA[loulan-d]]></name>
@@ -18,7 +18,68 @@
     <link href="http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook/"/>
     <updated>2018-10-12T20:07:41+08:00</updated>
     <id>http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h4>Jupyter notebook 安装conda环境</h4>
+
+<h5>安装:</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">conda</span> <span class="n">install</span> <span class="n">ipykernel</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>激活对应的conda环境:</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">source</span> <span class="n">activate</span> <span class="n">environment_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>将环境写入notebook 的kernel:</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">ipykernel</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">name</span> <span class="err">环境名称</span>  <span class="o">--</span><span class="n">display</span><span class="o">-</span><span class="n">name</span> <span class="s">&quot;Python （环境名称）&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>打开notebook</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">jupyter</span> <span class="n">notebook</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<hr />
+
+<h4>使用conda 创建 虚拟环境</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">conda</span> <span class="o">-</span><span class="n">V</span>
+</span><span class='line'><span class="n">conda</span> <span class="nb">list</span>
+</span><span class='line'><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>   <span class="ow">or</span>  <span class="n">conda</span> <span class="n">info</span> <span class="o">-</span><span class="n">e</span>       <span class="c"># 查看当前有那些虚拟环境</span>
+</span><span class='line'><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">env_name</span> <span class="n">python</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">x</span>      <span class="c"># 创建一个虚拟环境</span>
+</span><span class='line'><span class="n">source</span> <span class="n">activate</span> <span class="n">env_name</span>
+</span><span class='line'><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">env_name</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span>
+</span><span class='line'><span class="n">source</span> <span class="n">deactivate</span>
+</span><span class='line'><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">env_name</span> <span class="o">-</span><span class="nb">all</span>
+</span><span class='line'><span class="n">conda</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">env_name</span> <span class="n">package_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   

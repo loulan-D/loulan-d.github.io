@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Loulan-d's Blog]]></title>
+  <link href="http://loulan-d.github.io/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://loulan-d.github.io/"/>
+  <updated>2018-10-12T20:31:09+08:00</updated>
+  <id>http://loulan-d.github.io/</id>
+  <author>
+    <name><![CDATA[loulan-d]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jupyter-notebook]]></title>
+    <link href="http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook/"/>
+    <updated>2018-10-12T20:07:41+08:00</updated>
+    <id>http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook</id>
+    <content type="html"><![CDATA[<h4>Jupyter notebook 安装conda环境</h4>
+
+<h5>安装:</h5>
+
+<pre><code class="python">conda install ipykernel
+</code></pre>
+
+<h5>激活对应的conda环境:</h5>
+
+<pre><code class="python">source activate environment_name
+</code></pre>
+
+<h5>将环境写入notebook 的kernel:</h5>
+
+<pre><code class="python">python -m ipykernel install --user --name 环境名称  --display-name "Python （环境名称）"
+</code></pre>
+
+<h5>打开notebook</h5>
+
+<pre><code class="python">jupyter notebook
+</code></pre>
+
+<hr />
+
+<hr />
+
+<h4>使用conda 创建 虚拟环境</h4>
+
+<pre><code class="python">conda -V
+conda list
+conda env list   or  conda info -e       # 查看当前有那些虚拟环境
+conda update conda
+
+conda create -n env_name python=x.x      # 创建一个虚拟环境
+source activate env_name
+conda install -n env_name [package]
+source deactivate
+conda remove -n env_name -all
+conda remove --name env_name package_name
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
