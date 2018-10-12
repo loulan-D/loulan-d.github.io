@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://loulan-d.github.io/atom.xml" rel="self"/>
   <link href="http://loulan-d.github.io/"/>
-  <updated>2018-10-12T19:14:51+08:00</updated>
+  <updated>2018-10-12T19:47:46+08:00</updated>
   <id>http://loulan-d.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,11 +14,110 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Test]]></title>
-    <link href="http://loulan-d.github.io/blog/2018/10/12/test/"/>
-    <updated>2018-10-12T19:03:19+08:00</updated>
-    <id>http://loulan-d.github.io/blog/2018/10/12/test</id>
-    <content type="html"><![CDATA[
+    <title type="html"><![CDATA[Deploy-octopress]]></title>
+    <link href="http://loulan-d.github.io/blog/2018/10/12/deploy-octopress/"/>
+    <updated>2018-10-12T19:45:16+08:00</updated>
+    <id>http://loulan-d.github.io/blog/2018/10/12/deploy-octopress</id>
+    <content type="html"><![CDATA[<h3>Octopress Deploy to Github Pages</h3>
+
+<h4>1. Install Ruby on Ubuntu</h4>
+
+<blockquote><p>tar -zxf ruby-2.5.0.tar.gz</p>
+
+<p>cd ruby-2.5.0</p>
+
+<p>./configure &ndash;prefix=/usr/local/ruby</p>
+
+<p>make</p>
+
+<p>sudo make install</p>
+
+<p>sudo gedit /etc/profile</p>
+
+<p>export RUBY_HOME =/usr/local/software/ruby-2.5.0</p>
+
+<p>export PATH=${RUBY_HOME}/bin:$PATH</p>
+
+<p>source /etc/profile</p>
+
+<p>ruby -v</p></blockquote>
+
+<hr />
+
+<h4>2. Install Octopress</h4>
+
+<h5>check the git</h5>
+
+<blockquote><p>git &ndash;version</p></blockquote>
+
+<h5>git clone octopress</h5>
+
+<blockquote><p>git clone git://github.com/imathis/octopress.git octopress</p></blockquote>
+
+<h5>install others</h5>
+
+<blockquote><p>cd octopress
+gem install bundler
+rbenv rehash
+bundle install
+rake install</p></blockquote>
+
+<hr />
+
+<h4>3. Octopress deploy to Github Pages</h4>
+
+<ol>
+<li><p>rake setup_github_pages</p></li>
+<li><p>rake generate</p></li>
+<li><p>rake deploy</p></li>
+<li><p>github</p>
+
+<blockquote><h5>git add .</h5>
+
+<h5>git commit -m &lsquo;initial source commit&rsquo;</h5>
+
+<h5>git push origin source</h5></blockquote></li>
+</ol>
+
+
+<h5></h5>
+
+<hr />
+
+<h4>4. Create new Post</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s1">&#39;title&#39;</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">rake</span> <span class="n">preview</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">a</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Reference</h4>
+
+<p>​ <a href="https://www.jianshu.com/p/0c21051317fe">https://www.jianshu.com/p/0c21051317fe</a></p>
+
+<p>​ <a href="https://www.jianshu.com/p/40d90a71cab4">https://www.jianshu.com/p/40d90a71cab4</a></p>
+
+<p>​ <a href="https://www.jianshu.com/p/dd7a56d05fb5">https://www.jianshu.com/p/dd7a56d05fb5</a></p>
 ]]></content>
   </entry>
   
