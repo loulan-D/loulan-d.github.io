@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook/</loc>
-<lastmod>2018-10-12T20:07:41+08:00</lastmod>
+<loc>http://loulan-d.github.io/blog/2018/10/12/deploy-octopress/</loc>
+<lastmod>2018-10-12T22:13:18+08:00</lastmod>
 </url>
 <url>
-<loc>http://loulan-d.github.io/blog/2018/10/12/deploy-octopress/</loc>
-<lastmod>2018-10-12T19:45:16+08:00</lastmod>
+<loc>http://loulan-d.github.io/blog/2018/10/12/jupyter-notebook/</loc>
+<lastmod>2018-10-12T20:07:41+08:00</lastmod>
 </url>
 <url>
 <loc>http://loulan-d.github.io/blog/archives/</loc>
@@ -16,5 +16,11 @@
 </url>
 <url>
 <loc>http://loulan-d.github.io/blog/categories/python/</loc>
+</url>
+<url>
+<loc>http://loulan-d.github.io/blog/categories/github/</loc>
+</url>
+<url>
+<loc>http://loulan-d.github.io/blog/categories/pages/</loc>
 </url>
 </urlset>

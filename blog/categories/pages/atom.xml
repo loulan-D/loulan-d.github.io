@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Pages | Loulan-d's Blog]]></title>
+  <link href="http://loulan-d.github.io/blog/categories/pages/atom.xml" rel="self"/>
+  <link href="http://loulan-d.github.io/"/>
+  <updated>2018-10-12T22:14:29+08:00</updated>
+  <id>http://loulan-d.github.io/</id>
+  <author>
+    <name><![CDATA[loulan-d]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deploy-octopress]]></title>
+    <link href="http://loulan-d.github.io/blog/2018/10/12/deploy-octopress/"/>
+    <updated>2018-10-12T22:13:18+08:00</updated>
+    <id>http://loulan-d.github.io/blog/2018/10/12/deploy-octopress</id>
+    <content type="html"><![CDATA[<h3>Octopress Deploy to Github Pages</h3>
+
+<h4>1. Install Ruby on Ubuntu</h4>
+
+<pre><code class="python">tar -zxf ruby-2.5.0.tar.gz
+
+cd ruby-2.5.0
+
+./configure --prefix=/usr/local/ruby
+
+make
+
+sudo make install
+
+sudo gedit /etc/profile
+
+export RUBY_HOME =/usr/local/software/ruby-2.5.0
+
+export PATH=${RUBY_HOME}/bin:$PATH
+
+source /etc/profile
+
+ruby -v          
+</code></pre>
+
+<hr />
+
+<h4>2. Install Octopress</h4>
+
+<h5>check the git</h5>
+
+<pre><code>git --version
+</code></pre>
+
+<h5>git clone octopress</h5>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress 
+</code></pre>
+
+<h5>install others</h5>
+
+<pre><code>cd octopress
+gem install bundler
+rbenv rehash
+bundle install 
+rake install
+</code></pre>
+
+<hr />
+
+<h4>3. Octopress deploy to Github Pages</h4>
+
+<pre><code class="python">rake setup_github_pages
+
+rake generate 
+
+rake deploy
+
+github
+
+git add .
+
+git commit -m 'initial source commit'
+
+git push origin source    
+</code></pre>
+
+<h5></h5>
+
+<hr />
+
+<h4>4. Create new Post</h4>
+
+<pre><code class="ruby">rake new_post['title']
+
+rake generate
+
+rake preview
+
+rake deploy
+
+git commit -a
+
+git push origin source
+</code></pre>
+
+<h4>Reference</h4>
+
+<p>​ <a href="https://www.jianshu.com/p/0c21051317fe">https://www.jianshu.com/p/0c21051317fe</a></p>
+
+<p>​ <a href="https://www.jianshu.com/p/40d90a71cab4">https://www.jianshu.com/p/40d90a71cab4</a></p>
+
+<p>​ <a href="https://www.jianshu.com/p/dd7a56d05fb5">https://www.jianshu.com/p/dd7a56d05fb5</a></p>
+]]></content>
+  </entry>
+  
+</feed>
