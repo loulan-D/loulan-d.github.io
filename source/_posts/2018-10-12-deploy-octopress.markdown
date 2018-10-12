@@ -1,43 +1,59 @@
 ---
 layout: post
-title: "Deploy Octopress"
-date: 2018-10-12 17:12:51 +0800
+title: "deploy-octopress"
+date: 2018-10-12 19:45:16 +0800
 comments: true
-categories: 
+categories: Github Pages
 
 ---
 
+### Octopress Deploy to Github Pages
+
+
+
 #### 1. Install Ruby on Ubuntu 
 
-##### apt(Debian or Ubuntu )    Debian GNU/Linux  and Ubuntu use the apt package manager. You can use it like this:
+```python
+tar -zxf ruby-2.5.0.tar.gz
 
-```shell
-$ sudo apt-get install ruby-full
+cd ruby-2.5.0
+
+./configure --prefix=/usr/local/ruby
+
+make
+
+sudo make install
+
+sudo gedit /etc/profile
+
+export RUBY_HOME =/usr/local/software/ruby-2.5.0
+
+export PATH=${RUBY_HOME}/bin:$PATH
+
+source /etc/profile
+
+ruby -v          
 ```
 
-##### check the install
-
-```shell
-$ ruby -v 
-```
+ 
 
 ------
 
 #### 2. Install Octopress
 
-#####    check the git 
+##### check the git 
 
-```git
+```
 git --version
 ```
 
-#####    git clone octopress
+##### git clone octopress
 
-```git
+```
 git clone git://github.com/imathis/octopress.git octopress 
 ```
 
-#####    install others
+##### install others
 
 ```
 cd octopress
@@ -51,19 +67,21 @@ rake install
 
 #### 3. Octopress deploy to Github Pages
 
-1. rake setup_github_pages
+```python
+rake setup_github_pages
 
-2. rake generate 
+rake generate 
 
-3. http://localhost:4000/rake deploy
+rake deploy
 
-4. github
+github
 
-   > ##### git add .
-   >
-   > ##### git commit -m 'initial source commit'
-   >
-   > ##### git push origin source     ----- 将博客文件的原始文件提交到另外一个source 分支上
+git add .
+
+git commit -m 'initial source commit'
+
+git push origin source    
+```
 
 #####  
 
@@ -71,19 +89,19 @@ rake install
 
 #### 4. Create new Post
 
-> ##### rake new_post['title']
->
-> ##### rake generate
->
-> ##### rake preview
->
-> ##### rake deploy
->
-> ##### git commit -a
->
-> ##### git push origin source
+```ruby
+rake new_post['title']
 
-------
+rake generate
+
+rake preview
+
+rake deploy
+
+git commit -a
+
+git push origin source
+```
 
 
 
